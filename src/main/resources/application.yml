@@ -1,0 +1,22 @@
+micronaut:
+  application:
+    name: keyManagerGrpc
+  http:
+    client:
+      logger-name: mylogger
+    services:
+      otherClient:
+        logger-name: other.client
+
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/pix
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: 'root123'
+jpa.default.properties.hibernate.hbm2ddl.auto: update
+
+bcb:
+  pix:
+    url: 'http://localhost:8082'
+
